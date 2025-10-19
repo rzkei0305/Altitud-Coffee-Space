@@ -30,7 +30,7 @@ function Menu() {
         </div>
       </header> */}
 
-      <h1 className="menu-title">WHAT'S BREWING</h1>
+      <h1 className="menu-title">WHAT'S BREWING?</h1>
 
         <div className="menu-grid" >
           <div className="menu-card" onClick={() => navigate("/pastries")}> 

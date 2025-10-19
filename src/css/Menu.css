@@ -1,41 +1,22 @@
 .menu-page {
-  @apply flex flex-col items-center px-6 py-8;
-}
-
-.menu-header {
-  @apply fixed top-0 left-0 w-full h-[60px] flex items-center justify-between 
-         px-6 py-3 shadow-md bg-white z-50;
-}
-
-.logo img {
-  @apply w-14 h-14;
-}
-
-.icons {
-  @apply flex items-center gap-3 text-2xl text-black;
-}
-
-.icon {
-  @apply cursor-pointer;
+  @apply flex flex-col items-center px-2 pt-14 pb-40 mt-10 space-y-10; 
 }
 
 .menu-title {
-  @apply text-3xl font-bold mt-12 mb-8 text-center font-montserrat;
+  @apply font-bold mt-2 mb-6 text-center font-montserrat;
+  font-size: 48px !important;
 }
-
 
 .menu-grid {
-  @apply grid grid-cols-2 gap-8 w-full max-w-md;
+  @apply grid grid-cols-4 gap-24 w-full mt-8 mb-10 max-w-5xl;
 }
-
 
 .menu-card {
   @apply flex flex-col items-center text-center;
 }
 
-
 .menu-img-wrapper {
-  @apply w-36 h-36 rounded-full flex items-center justify-center 
+  @apply w-[250px] h-[250px] rounded-full flex items-center justify-center 
          bg-gradient-to-b from-orange-400 to-orange-500 overflow-hidden
          transition duration-300;
 }
@@ -46,22 +27,51 @@
 }
 
 .menu-label {
-  @apply mt-3 text-sm font-bold text-orange-600 font-poppins;
+  @apply mt-5 text-[20px] font-bold text-orange-600 font-poppins;
 }
 
-@media (min-width: 768px) {
-  .menu-grid 
-  {
-    @apply grid-cols-4 gap-12 max-w-4xl;
+@media (min-width: 541px) and (max-width: 1024px) {
+  .menu-title {
+    font-size: 40px !important;
+    @apply mt-10 mb-5;
   }
 
-  .menu-title 
-  {
-    @apply text-3xl;
+  .menu-grid {
+    @apply grid-cols-2 gap-10 max-w-2xl mt-5;
   }
 
-  .menu-label 
-  {
-    @apply text-base;
+  .menu-img-wrapper {
+    @apply w-[200px] h-[200px];
+  }
+
+  .menu-label {
+    @apply text-base mt-4;
+  }
+
+  .menu-page {
+    @apply space-y-8 pb-8 mt-8;
+  }
+}
+
+@media (max-width: 540px) {
+  .menu-title {
+    font-size: 32px !important;
+    @apply mt-10 mb-4;
+  }
+
+  .menu-grid {
+    @apply grid-cols-2 gap-8 max-w-sm mt-6;
+  }
+
+  .menu-img-wrapper {
+    @apply w-[140px] h-[140px];
+  }
+
+  .menu-label {
+    @apply text-sm mt-3;
+  }
+
+  .menu-page {
+    @apply space-y-8 pb-8 mt-8;
   }
 }
