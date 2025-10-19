@@ -1,0 +1,143 @@
+.pastries-page {
+  @apply flex flex-col items-center px-6 py-20;
+}
+
+
+.pastries-header {
+  @apply fixed top-0 left-0 w-full h-[60px] flex items-center justify-between 
+         px-6 bg-white shadow-md z-50;
+}
+
+.logo img {
+  @apply w-14 h-14;
+}
+
+.icons {
+  @apply flex items-center gap-3 text-2xl text-black;
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+
+.pastries-title {
+  @apply text-[36px] font-bold text-center font-montserrat;
+}
+
+.pastries-subtitle {
+  @apply text-center text-sm text-black italic font-poppins;
+}
+
+.pastries-subtitle .sweet {
+  @apply text-orange-600 font-semibold;
+}
+
+.pastries-subtitle .savory {
+  @apply text-orange-600 font-semibold;
+}
+
+
+.pastries-grid {
+  @apply grid grid-cols-2 gap-8 mt-10 w-full max-w-md;
+}
+
+@media (min-width: 768px) {
+  .pastries-grid {
+    @apply grid-cols-3 gap-10 max-w-4xl;
+  }
+}
+
+
+.pastry-card {
+  @apply flex flex-col items-center text-center p-4 rounded-xl shadow-sm;
+}
+
+.pastry-card img {
+  @apply w-24 h-24 object-cover mb-2;
+}
+
+.pastry-card h3 {
+  @apply text-sm font-semibold text-black whitespace-nowrap;
+}
+
+.price {
+  @apply text-xs text-black mt-1 mb-3;
+}
+
+
+.order-controls {
+  @apply flex justify-center items-center gap-1 p-0.5;
+}
+
+.qty-selector {
+  @apply w-16 flex items-center border-[1.75px] border-orange-500 
+          rounded-full px-3 py-1 h-7 min-w-[50px] text-xs font-normal;
+}
+
+.qty-selector button {
+  @apply w-4 text-orange-500 font-bold px-2;
+}
+
+.qty-selector span {
+  @apply mx-auto;
+}
+
+.add-btn {
+  @apply min-w-[70px]  h-7 px-2 rounded-full text-[11px] font-medium text-black whitespace-nowrap
+         bg-gradient-to-r from-orange-400 to-orange-600 
+         flex items-center justify-center;
+}
+
+.alert-popup {
+  @apply fixed top-20 left-1/2 transform -translate-x-1/2 
+         bg-orange-500 text-white font-medium px-4 py-2 
+         rounded-full shadow-lg z-50 transition-all duration-500;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+@media (min-width: 768px) { 
+  .pastries-grid 
+  {
+    @apply grid-cols-3 gap-10 max-w-4xl;
+  }
+  .pastries-title 
+  {
+    @apply text-4xl;
+  }
+  .pastries-subtitle 
+  {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .pastries-grid 
+  {
+    @apply grid-cols-4 gap-12 max-w-6xl;
+  }
+  .pastries-title 
+  {
+    @apply text-5xl;
+  }
+  .pastries-subtitle 
+  {
+    @apply text-lg;
+  }
+}
+

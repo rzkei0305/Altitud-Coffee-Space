@@ -1,0 +1,671 @@
+.homepage {
+  @apply m-0 p-0;
+}
+
+.login-header {
+  @apply absolute top-0 left-0 w-full p-4 flex justify-between items-center z-50;
+}
+
+.logo {
+  @apply h-auto items-center justify-start;
+  flex-shrink:0 !important;
+  /* width: clamp(300px, 60vw, 900px);   */
+}
+
+.logo img {
+  @apply w-full h-auto object-contain block;
+  width: 100% !important;
+}
+
+
+@media (max-width: 540px) {
+  .logo {
+    width: clamp(150px, 50vw, 300px);
+  }
+
+  .logo img{
+    margin-left: -5vh;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 1024px){
+  .logo {
+    width: clamp(200px, 60vw, 350px);
+  }
+
+  .logo img{
+    margin-left: -10vh;
+  }
+}
+
+
+
+.icons button {
+  @apply bg-transparent border-none text-white text-xl sm:text-2xl ml-2 sm:ml-4 cursor-pointer;
+}
+
+.hero {
+  @apply relative flex justify-center items-center text-center h-screen bg-cover bg-center;
+  background-image: url("/src/assets/homepage-bg.png");
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-black/50;
+}
+
+.hero-content {
+  @apply relative z-10 text-white px-4 sm:px-0;
+}
+
+.hero-content h1 {
+  @apply text-3xl sm:text-4xl lg:text-5xl mb-4 leading-snug sm:leading-normal font-montserrat italic font-semibold;
+  @apply [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)];
+}
+
+.hero-content p {
+  @apply text-[16px] sm:text-[20px] mb-6 italic font-poppins;
+  @apply [text-shadow:1px_1px_2px_rgba(0,0,0,0.4)];
+}
+
+.order-btn {
+  @apply text-[16px] sm:text-[20px] px-4 sm:px-4 py-2 sm:py-2 mt-5 border-2 border-white rounded-full bg-transparent text-white cursor-pointer 
+  transition-all duration-300 ease-in-out;
+}
+
+.order-btn:hover {
+  @apply bg-[#FF5125] text-white;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.7);
+}
+
+/* ===== FEATURED SECTION ===== */
+.featured {
+  @apply relative w-full bg-cover bg-center bg-no-repeat overflow-hidden;
+  display: grid;
+  /* grid-template-columns: 1fr; mobile view: 1 column */
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+
+  @screen md {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .featured {
+    min-height: 100vh; 
+  }
+}
+
+.featured-container {
+  @apply relative z-10 flex flex-col md:flex-row items-center justify-between px-6 md:px-16;
+}
+
+
+.featured-left {
+  @apply flex justify-center md:justify-start items-center text-left;
+}
+
+.featured-heading {
+  @apply  md:text-[70px] font-[600] font-montserrat leading-tight text-left mt-[-100px]  ml-8;
+          
+}
+
+.featured-highlight {
+  @apply text-[140px] text-[#FF5125] font-extrabold italic block mt-[-20px] -ml-2;
+}
+
+.featured-highlight2 {
+  @apply text-[140px] text-[#FF5125] font-extrabold italic block -mt-5 ml-[10%];
+}
+
+
+.featured-right {
+  @apply flex justify-center md:justify-end items-center relative;
+}
+
+.featured-drinks {
+  @apply relative flex flex-col items-center justify-center -mt-3; /* stacked vertically */
+}
+
+.isla {
+  @apply flex items-center justify-start w-full relative;
+  margin-left: 10rem;
+}
+
+.sunkissed {
+  @apply flex items-center justify-end w-full relative;
+  margin-right: 2rem;
+}
+
+.drink-content {
+  @apply flex items-center;
+}
+
+.sunkissed .drink-content {
+  @apply flex-row-reverse;
+}
+
+.drink-stack {
+  @apply relative flex justify-center items-center;
+}
+
+.drink-image {
+  @apply w-[350px] drop-shadow-xl;
+}
+
+.splash,
+.ice {
+  @apply absolute top-0 left-0 w-full h-full object-contain transition-transform duration-1000 ease-in;
+}
+
+.drink-text {
+  @apply relative z-30;
+}
+
+.drink-name {
+  @apply text-[#FF5125] font-poppins font-semibold text-[50px];
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff,0 0 20px #ffffff;
+}
+
+
+.drink-desc {
+  @apply text-[#FF5125] font-poppins font-normal text-[16px] italic;
+}
+
+.drink-card:hover .ice {
+  animation: floatIce 1s ease-in;
+}
+
+.drink-card:hover .splash {
+  animation: floatSplash 1s ease-in;
+}
+
+@keyframes floatIce {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(6px, -6px) rotate(3deg);
+  }
+}
+
+@keyframes floatSplash {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+
+/* Tablet view adjustments */
+@media (min-width: 541px) and (max-width: 1024px)
+{
+  .featured {
+    @apply relative w-full bg-cover bg-center bg-no-repeat overflow-hidden;
+    padding: 1.5rem;
+    grid-template-columns: 1fr; 
+  }
+
+  .featured-left {
+    margin-top: -10vh;
+    justify-content: center;
+  }
+
+  .featured-heading {
+    text-align: center !important;
+    font-size: 40px;
+    margin-top: -80px;
+    white-space: nowrap;
+  }
+
+  .featured-highlight,
+  .featured-highlight2 {
+    display: inline-block;
+    font-size: 66px;
+    text-align: center !important;
+    margin: 0 10px;
+  }
+
+  .featured-right {
+    margin-top: -30vh;
+    justify-content: center;
+  }
+
+  .featured-drinks {
+    margin-top: -100px;
+    align-items: center;
+  }
+
+  .isla {
+    margin-left: -200px;
+    justify-content: center;
+  }
+
+  .sunkissed {
+    margin-left: 160px;
+    margin-top: -40px;
+    justify-content: center;
+  }
+
+  .drink-image {
+    width: 300px;
+  }
+
+  .drink-name {
+    font-size: 45px;
+  }
+
+  .drink-desc {
+    font-size: 18px;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 540px) {
+  .featured {
+    @apply relative w-full bg-cover bg-center bg-no-repeat overflow-hidden;
+    padding: 1.5rem;
+    grid-template-columns: 1fr; /* stack text and drinks */
+  }
+
+  .featured-left {
+    margin-top: -25vh;
+    justify-content: left;
+  }
+
+  .featured-heading {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 7px;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .featured-highlight
+ {
+    font-size: 45px;
+    text-align: left;
+    display: block;
+
+  }
+
+  .featured-highlight2 
+  {
+    font-size: 45px;
+    text-align: left;
+    margin-left: 100px;
+    display: block; 
+  
+  }
+
+  .featured-right {
+    margin-top: -30vh;
+    justify-content: center;
+  }
+
+  .featured-drinks {
+    margin-top: -100px;
+    align-items: center;
+  }
+
+  .isla, .sunkissed {
+    margin: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* .drink-content {
+    flex-direction: column !important;
+  } */
+
+  .drink-image {
+    width: 230px;
+  }
+
+  .drink-name {
+    font-size: 28px;
+  }
+
+  .drink-desc {
+    font-size: 10.75px;
+  }
+}
+
+
+/* ===== BARISTA'S PICKS ===== */
+.barista {
+  @apply relative w-full px-6 text-center bg-no-repeat bg-cover bg-center overflow-hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(4rem, 10vh, 6rem);
+  padding-bottom: clamp(2rem, 8vh, 5rem);
+}
+
+.barista-content {
+  @apply relative z-10 flex flex-col items-center w-full;
+  /* max-width: 1200px; */
+}
+
+.barista-title {
+  @apply text-[80px] font-extrabold font-montserrat leading-none -mt-2;
+}
+
+.barista-sub {
+  @apply text-black text-[18px] italic mb-14;
+}
+
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap:10em;
+  cursor: grab;
+  user-select: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.carousel::-webkit-scrollbar,
+.barista-card::-webkit-scrollbar{
+  display: none;
+}
+
+.barista-grid {
+  @apply flex  gap-[10em] justify-items-center mx-auto;
+  margin-top: 12rem;
+  width: max-content;
+  max-width: none;
+  overflow: visible;
+  animation: spin 35s infinite linear;
+}
+
+.barista-card {
+  @apply rounded-[25px] shadow-lg overflow-visible w-72 text-center transition-transform duration-300;
+  background-color: #FDDBBC;
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+.barista-card:hover {
+  transform: scale(1.15);
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
+}
+
+.barista-top {
+  background-image: url("/src/assets/home/coffee-table.png"); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: relative;
+  overflow: visible;
+}
+
+.barista-card img {
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 210px;
+  z-index: 2;
+  pointer-events: none
+}
+
+.barista-name {
+  @apply text-white font-bold text-xl font-poppins;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.barista-info {
+  background-color: #FDDBBC;
+  width: 100%;
+  padding: 1.5rem 1rem 1rem 1rem;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.barista-desc {
+  @apply text-black text-sm mb-2 leading-snug font-poppins;
+}
+
+.barista-price {
+  @apply text-black font-bold text-lg font-poppins text-left;
+}
+
+/* .barista-card.highlight {
+  @apply scale-110 shadow-lg;
+  transform: translateY(-40px) scale(1.1);
+  background-color: #FDDBBC;
+} */
+
+.barista-nav {
+  @apply flex justify-center items-center gap-4 mt-[90px];
+}
+
+.barista-arrow {
+  @apply text-2xl text-black hover:text-[#FF5125] cursor-pointer transition-colors duration-300;
+}
+
+
+@media (min-width: 541px) and (max-width: 1024px) {
+  .barista {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .barista-title {
+    font-size: 55px; 
+  }
+
+  .barista-sub {
+    font-size: 16px;
+    margin-bottom: 2.5rem;
+  }
+  .carousel {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 6rem;
+    padding: 0 2rem;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .barista-grid {
+    @apply flex justify-items-center;
+    gap: 6rem;
+    margin-top: 5rem;
+    width: max-content;
+    max-width: none;
+    animation: spin 45s infinite linear; 
+    padding-bottom: 3rem; 
+  }
+
+  .barista-card {
+    width: 220px;
+    background-color: #FDDBBC;
+    position: relative;
+    flex: none;
+    transition: transform 0.3s ease;
+  }
+
+  .barista-card:hover {
+    transform: scale(1.05);
+  }
+
+  .barista-card img {
+    width: 150px;
+    top: -65px;
+  }
+
+  .barista-top {
+    height: 130px;
+  }
+
+  .barista-name {
+    font-size: 1rem;
+  }
+
+  .barista-desc {
+    font-size: 0.85rem;
+  }
+
+  .barista-price {
+    font-size: 1rem;
+  }
+
+  .barista-nav {
+    margin-top: 30px;
+  }
+
+  .barista-card.highlight {
+    transform: translateY(-25px) scale(1.08);
+  }
+}
+
+
+@media (max-width: 540px) {
+  .barista {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .barista-title {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .barista-sub {
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+  }
+
+  .carousel {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+    cursor: grab;
+    user-select: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .barista-grid {
+    @apply flex gap-[3rem];
+    animation: spin 45s infinite linear; 
+    margin-top: 3.5rem;
+    width: max-content;
+    max-width: none;
+  }
+
+  .barista-card {
+    flex: 0 0 auto;
+    width: 150px;
+    background-color: #FDDBBC;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .barista-card:hover {
+    transform: scale(1.05);
+  }
+
+  .barista-card img {
+    width: 130px;
+    top: -55px;
+  }
+
+  .barista-top {
+    height: 110px;
+  }
+
+  .barista-name {
+    font-size: 0.9rem;
+  }
+
+  .barista-desc {
+    font-size: 0.8rem;
+  }
+
+  .barista-price {
+    font-size: 0.9rem;
+  }
+
+  .barista-card.highlight {
+    transform: translateY(-15px) scale(1.05);
+  }
+
+  .barista-nav {
+    margin-top: 50px;
+  }
+}

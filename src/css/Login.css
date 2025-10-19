@@ -1,0 +1,103 @@
+
+.login-page {
+  @apply relative flex justify-center items-center text-center font-poppins
+  h-screen bg-cover bg-no-repeat bg-center;
+  background-image: url("/src/assets/login-bg.png");  
+  background-position: 50% 35%;
+}
+
+.login-header {
+  @apply flex bg-white justify-between items-center px-4 h-[60px] shadow-md;
+}
+
+
+.logo img {
+  @apply w-14 h-14;
+}
+
+.icons {
+  @apply flex items-center gap-3 text-black text-2xl;
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+.login-content {
+  @apply flex flex-col justify-center items-center text-center px-6 flex-grow;
+  min-height: calc(100vh - 60px); 
+}
+
+
+.login-content h1 {
+  @apply text-white text-lg font-medium mb-8 leading-snug;
+}
+
+.login-content .coffee {
+  @apply text-orange-500;
+}
+
+.login-form {
+  @apply flex flex-col gap-4 w-full max-w-xs ;
+}
+
+.login-form input {
+  @apply w-full rounded-full px-4 py-2 bg-white/20 placeholder-white text-white text-sm
+  focus:outline-none border border-white;
+}
+
+
+.password-wrapper {
+  @apply relative;
+}
+
+.password-wrapper .eye-icon {
+  @apply absolute right-4 top-1/2 -translate-y-1/2 text-white cursor-pointer;
+}
+
+.forgot {
+  @apply text-white text-xs text-right cursor-pointer;
+}
+
+.login-form button {
+  @apply w-40 mx-auto mt-2 bg-white/20 border border-white text-white font-normal tracking-wide 
+  rounded-full py-2 text-sm hover:bg-[#FF5125] transition;
+}
+
+.login-form p span {
+  @apply hover:underline transition-all duration-200;
+}
+
+
+@media (min-width: 640px) {
+    .login-page{
+        background-position: 20%;
+    }
+
+  .login-content h1 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .login-form {
+    @apply max-w-sm;
+  }
+
+  .login-form input {
+    @apply text-base;
+  }
+
+  .forgot {
+    @apply text-sm;
+  }
+
+  .login-form button {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 400px) {
+    .login-page{
+        background-position: 25%;
+    }
+
+}

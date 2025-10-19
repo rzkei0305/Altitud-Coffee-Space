@@ -1,0 +1,84 @@
+.navbar {
+  @apply fixed top-0 left-0 w-full bg-white flex justify-between items-center px-5 py-2 shadow-md z-50;
+}
+
+.navbar-left {
+  @apply flex items-center;
+}
+
+.navbar-logo {
+  @apply w-[130px] h-auto object-contain;
+}
+
+.navbar-center {
+  @apply flex gap-10 text-[13px] font-montserrat font-semibold;
+}
+
+.navbar-center a {
+  @apply text-gray-700 hover:text-[#FF5125] transition-colors duration-300 relative;
+}
+
+.navbar-center a.active {
+  @apply text-[#FF5125];
+}
+
+.navbar-center a.active::after {
+  content: "";
+  @apply absolute left-0 -bottom-1 w-full h-[2px] bg-[#FF5125];
+}
+
+.navbar-right {
+  @apply flex items-center gap-6 text-[22px];
+}
+
+.nav-icon {
+  @apply cursor-pointer text-gray-800 hover:text-[#FF5125] transition-colors duration-300;
+}
+
+/* Burger Icon (Hidden on Desktop) */
+.burger-icon {
+  @apply hidden text-2xl cursor-pointer text-gray-800 hover:text-[#FF5125];
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  @apply absolute top-full left-0 w-full bg-white flex flex-col items-center gap-5 py-5 text-sm font-semibold shadow-md animate-fadeIn;
+}
+
+.mobile-menu a {
+  @apply text-gray-700 hover:text-[#FF5125] transition-colors duration-300;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    @apply px-4 py-3;
+  }
+
+  .navbar-center {
+    @apply hidden;
+  }
+
+  .burger-icon {
+    @apply block;
+  }
+
+  .navbar-logo {
+    @apply w-[180px];
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}

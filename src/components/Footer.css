@@ -1,0 +1,78 @@
+.footer {
+  @apply bg-white shadow-[0_-4px_6px_rgba(0,0,0,0.4)] 
+         px-8 py-6 text-[14px] text-black;
+}
+
+.footer-container {
+  @apply max-w-full mx-auto grid grid-cols-2 gap-1 text-black;
+}
+
+.footer-section h3 {
+  @apply font-bold text-[13px] mb-2;
+}
+
+.footer-section p {
+  @apply text-[11px];
+}
+
+.footer-section .mt {
+  @apply mt-4 text-[13px];
+}
+
+.footer-section ul {
+  @apply list-none p-0 m-0 text-[11px];
+}
+
+.footer-section li {
+  @apply flex items-center gap-2 mb-2 text-[11px];
+}
+
+.footer-form {
+  @apply flex  mt-2 text-[11px];
+}
+
+.footer-form input {
+  @apply flex-1 max-w-[200px] border border-orange-500 
+         rounded-l outline-none;
+}
+
+.footer-form button {
+  @apply bg-orange-500 text-white px-4 py-2 rounded-r cursor-pointer transition-colors;
+}
+
+.footer-form button:hover {
+  @apply bg-orange-600;
+}
+
+hr {
+  @apply border-0 border-t border-orange-300 my-6;
+}
+
+.footer-bottom {
+  @apply flex flex-col items-center gap-2 text-gray-600 -mt-2 text-[11px];
+}
+
+.footer-links {
+  @apply flex gap-6;
+}
+
+.footer-links a {
+  @apply text-gray-600 no-underline;
+}
+
+.footer-links a:hover {
+  @apply text-black;
+}
+
+
+@media (min-width: 768px) {
+  .footer-container 
+  {
+    @apply grid-cols-2;
+  }
+
+  .footer-bottom 
+  {
+    @apply flex-row justify-between;
+  }
+}

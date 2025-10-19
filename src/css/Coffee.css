@@ -1,0 +1,156 @@
+.coffee-page {
+  @apply flex flex-col px-6 py-20;
+}
+
+.coffee-header {
+  @apply fixed top-0 left-0 w-full h-[60px] flex items-center justify-between 
+         px-6 bg-white shadow-md z-50;
+}
+
+.logo img {
+  @apply w-14 h-14;
+}
+
+.icons {
+  @apply flex items-center gap-3 text-2xl text-black;
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+.coffee-title {
+  @apply text-[36px] font-bold text-center font-montserrat;
+}
+
+.coffee-subtitle {
+  @apply text-center text-sm text-black italic font-poppins;
+}
+
+.coffee-subtitle .hot {
+  @apply text-orange-600 font-semibold;
+}
+
+.coffee-subtitle .cold {
+ @apply text-orange-600 font-semibold;
+}
+
+
+.coffee-section {
+  @apply text-xl italic mt-10 mb-2 text-left font-semibold font-poppins;
+}
+
+
+.coffee-page hr {
+  @apply w-full border border-t border-black my-2;
+}
+
+
+.coffee-grid {
+  @apply grid grid-cols-2 gap-8 mt-2 w-full max-w-md mx-auto;
+}
+
+
+.coffee-card {
+  @apply flex flex-col items-center text-center p-4 rounded-xl shadow-sm;
+}
+
+
+.coffee-img {
+  @apply w-20 h-20 object-cover mb-2;
+}
+
+
+.coffee-name {
+   @apply text-sm font-semibold text-black whitespace-nowrap;
+}
+
+.coffee-price {
+    @apply text-xs text-black mt-1 mb-3;
+}
+
+
+.coffee-controls {
+    @apply flex justify-center items-center gap-1 p-0.5;
+}
+
+
+.qty-selector {
+  @apply w-16 flex items-center border-[1.75px] border-orange-500 
+          rounded-full px-3 py-1 h-7 min-w-[50px] text-xs font-normal;
+}
+
+.qty-selector button {
+  @apply w-4 text-orange-500 font-bold px-2;
+}
+
+.qty-selector span {
+  @apply mx-auto;
+}
+
+
+.add-btn {
+  @apply min-w-[70px]  h-7 px-2 rounded-full text-[11px] font-medium text-black whitespace-nowrap
+         bg-gradient-to-r from-orange-400 to-orange-600 
+         flex items-center justify-center;
+}
+
+.alert-popup {
+  @apply fixed top-20 left-1/2 transform -translate-x-1/2 
+         bg-orange-500 text-white font-medium px-4 py-2 
+         rounded-full shadow-lg z-50 transition-all duration-500;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+@media (min-width: 768px) { 
+  .coffee-grid 
+  {
+    @apply grid-cols-3 gap-10 max-w-3xl mx-auto;
+  }
+  .coffee-title 
+  {
+    @apply text-4xl;
+  }
+  .coffee-subtitle 
+  {
+    @apply text-base;
+  }
+  .coffee-section 
+  {
+    @apply text-2xl;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .coffee-grid 
+  {
+    @apply grid-cols-4 gap-12 max-w-5xl mx-auto;
+  }
+  .coffee-title 
+  {
+    @apply text-5xl;
+  }
+  .coffee-subtitle 
+  {
+    @apply text-lg;
+  }
+  .coffee-section 
+  {
+    @apply text-3xl;
+  }
+}

@@ -1,0 +1,67 @@
+.menu-page {
+  @apply flex flex-col items-center px-6 py-8;
+}
+
+.menu-header {
+  @apply fixed top-0 left-0 w-full h-[60px] flex items-center justify-between 
+         px-6 py-3 shadow-md bg-white z-50;
+}
+
+.logo img {
+  @apply w-14 h-14;
+}
+
+.icons {
+  @apply flex items-center gap-3 text-2xl text-black;
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+.menu-title {
+  @apply text-3xl font-bold mt-12 mb-8 text-center font-montserrat;
+}
+
+
+.menu-grid {
+  @apply grid grid-cols-2 gap-8 w-full max-w-md;
+}
+
+
+.menu-card {
+  @apply flex flex-col items-center text-center;
+}
+
+
+.menu-img-wrapper {
+  @apply w-36 h-36 rounded-full flex items-center justify-center 
+         bg-gradient-to-b from-orange-400 to-orange-500 overflow-hidden
+         transition duration-300;
+}
+
+.menu-img-wrapper:hover {
+  box-shadow: 0 0 20px rgb(255, 100, 43); 
+  transform: scale(1.05);
+}
+
+.menu-label {
+  @apply mt-3 text-sm font-bold text-orange-600 font-poppins;
+}
+
+@media (min-width: 768px) {
+  .menu-grid 
+  {
+    @apply grid-cols-4 gap-12 max-w-4xl;
+  }
+
+  .menu-title 
+  {
+    @apply text-3xl;
+  }
+
+  .menu-label 
+  {
+    @apply text-base;
+  }
+}

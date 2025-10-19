@@ -1,0 +1,109 @@
+/* ===== CREATE ACCOUNT PAGE ===== */
+
+.regis-page {
+  @apply relative flex flex-col h-screen font-poppins bg-cover bg-no-repeat bg-center;
+  background-image: url("/src/assets/login-bg.png");
+  background-position: 50% 35%;
+}
+
+/* ===== HEADER ===== */
+.regis-header {
+  @apply flex bg-white justify-start items-center px-4 h-[60px] shadow-md;
+}
+
+/* ✅ Fixed selector */
+.logo img {
+  @apply w-14 h-14;
+}
+
+/* ===== MAIN CONTENT ===== */
+.regis-content {
+  @apply flex flex-col justify-center items-center text-center px-6 flex-grow;
+  min-height: calc(100vh - 60px);
+}
+
+.regis-content h1 {
+  @apply text-white text-lg font-medium mb-8 leading-snug;
+}
+
+.regis-content .coffee {
+  @apply text-orange-500;
+}
+
+/* ===== FORM ===== */
+.regis-form {
+  @apply flex flex-col gap-4 w-full max-w-xs;
+}
+
+.regis-form input {
+  @apply w-full rounded-full px-4 py-2 bg-white/20 placeholder-white text-white text-sm
+  focus:outline-none border border-white;
+}
+
+/* PASSWORD ICONS */
+.password-wrapper {
+  @apply relative;
+}
+
+.password-wrapper .eye-icon {
+  @apply absolute right-4 top-1/2 -translate-y-1/2 text-white cursor-pointer;
+}
+
+/* BUTTON */
+.regis-form button {
+  @apply w-60 mx-auto mt-2 bg-white/20 border border-white text-white font-normal tracking-wide 
+  rounded-full py-2 text-sm hover:bg-[#FF5125] transition;
+}
+
+/* ===== SIGN-IN LINK ===== */
+.regis-form p {
+  @apply text-white text-xs text-center cursor-pointer mt-3;
+}
+
+.regis-form p span {
+  @apply hover:underline transition-all duration-200;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (min-width: 640px) {
+  .regis-page {
+    background-position: 20%;
+  }
+
+  .regis-content h1 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .regis-form {
+    @apply max-w-sm;
+  }
+
+  .regis-form input {
+    @apply text-base;
+  }
+
+  .regis-form button {
+    @apply text-base;
+  }
+}
+
+@media (min-width: 400px) {
+  .regis-page {
+    background-position: 25%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 639px) {
+  .regis-content h1 {
+    @apply text-base leading-snug;
+  }
+
+  .regis-form input {
+    @apply text-sm;
+  }
+
+  .regis-form button {
+    @apply text-sm py-2;
+  }
+}
