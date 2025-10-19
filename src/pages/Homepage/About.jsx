@@ -30,30 +30,32 @@ function About() {
         </div>
       </header> */}
 
-      <main className="about-content">
-        <h1>
-          THE STORY OF <br/> <span className="highlight">ALTITUD</span>
-        </h1>
+<main className="about-content">
+  <div className="about-left">
+    <h1>
+      THE STORY OF <br /> <span className="highlight">ALTITUD</span>
+    </h1>
+    <p className="about-text">
+      Altitud began in our garage back in 2021, inspired by both our love
+      for coffee and the mountains we climb. The name comes from "altitude,"
+      symbolizing height and elevation — a nod to the complex flavors that
+      higher elevations bring to coffee, our beans sourced from Philippine
+      mountain origins, and our founders' passion as mountaineers. This
+      spirit lives in our café's theme, blending industrial touches,
+      greenery, and snapshots from our hikes.
+    </p>
+  </div>
 
-        <div className="about-images">
-            <div className="img-left">
-                <img src={about2} alt="brewing" />
-            </div>
-            <div className="img-right">
-                <img src={about1} alt="grinding" />
-            </div>
-        </div>
+  <div className="about-images">
+    <div className="img-left">
+      <img src={about2} alt="brewing" />
+    </div>
+    <div className="img-right">
+      <img src={about1} alt="grinding" />
+    </div>
+  </div>
+</main>
 
-        <p className="about-text">
-          Altitud began in our garage back in 2021, inspired by both our love
-          for coffee and the mountains we climb. The name comes from "altitude,"
-          symbolizing height and elevation — a nod to the complex flavors that
-          higher elevations bring to coffee, our beans sourced from Philippine
-          mountain origins, and our founders' passion as mountaineers. This
-          spirit lives in our café's theme, blending industrial touches,
-          greenery, and snapshots from our hikes.
-        </p>
-      </main>
 
     </div>
     </>
