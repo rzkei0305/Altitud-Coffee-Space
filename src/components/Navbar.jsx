@@ -37,12 +37,10 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      {/* Left: Logo */}
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="navbar-logo" />
       </div>
 
-      {/* Center: Navigation Links (Desktop) */}
       <nav className="navbar-center">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
           HOME
@@ -58,18 +56,15 @@ function Navbar() {
         </NavLink>
       </nav>
 
-      {/* Right: Icons */}
       <div className="navbar-right">
         <FiUser className="nav-icon" onClick={handleLogin} />
         <FiShoppingBag className="nav-icon" onClick={handleBasket} />
 
-        {/* Burger menu icon (mobile) */}
         <div className="burger-icon" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="mobile-menu">
           <NavLink to="/" onClick={() => setMenuOpen(false)}>

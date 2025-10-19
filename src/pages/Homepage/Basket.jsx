@@ -90,7 +90,6 @@ function Basket() {
             )}
           </div>
         </div>
-
         
         <div
           className={`basket-right ${

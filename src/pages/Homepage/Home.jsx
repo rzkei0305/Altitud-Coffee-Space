@@ -147,7 +147,6 @@ function Home() {
 
         </div>
       </div>
-
       </section>
 
       {/* BARISTA'S PICKS SECTION */}
@@ -232,7 +231,7 @@ function Home() {
               </div>
             </div>
 
-            {/* duplicated- for loop carousel */}
+            {/* duplicated - for loop carousel */}
             <div aria-hidden className="barista-grid">
               <div className="barista-card">
                 <div className="barista-top">

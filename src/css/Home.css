@@ -77,7 +77,8 @@
   box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.7);
 }
 
-/* ===== FEATURED SECTION ===== */
+
+/* ========================================== FEATURED SECTION ========================================== */
 .featured {
   @apply relative w-full bg-cover bg-center bg-no-repeat overflow-hidden;
   display: grid;
@@ -169,7 +170,6 @@
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff,0 0 20px #ffffff;
 }
 
-
 .drink-desc {
   @apply text-[#FF5125] font-poppins font-normal text-[16px] italic;
 }
@@ -200,7 +200,6 @@
   }
 }
 
-/* Tablet view adjustments */
 @media (min-width: 541px) and (max-width: 1024px)
 {
   .featured {
@@ -263,7 +262,6 @@
   }
 }
 
-/* Mobile view adjustments */
 @media (max-width: 540px) {
   .featured {
     @apply relative w-full bg-cover bg-center bg-no-repeat overflow-hidden;
@@ -338,7 +336,7 @@
 }
 
 
-/* ===== BARISTA'S PICKS ===== */
+/* ======================================== BARISTA'S PICKS SECTION ========================================== */
 .barista {
   @apply relative w-full px-6 text-center bg-no-repeat bg-cover bg-center overflow-hidden;
   min-height: 100vh;

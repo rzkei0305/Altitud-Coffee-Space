@@ -20,7 +20,6 @@ function About() {
     <>
     <Navbar />
     <div className="bg-radial-custom min-h flex flex-col">
-      
       {/* <header className="about-header">
         <div className="logo">
           <img src={logo} alt="Logo" onClick={backToHome}/>
@@ -44,7 +43,6 @@ function About() {
                 <img src={about1} alt="grinding" />
             </div>
         </div>
-
 
         <p className="about-text">
           Altitud began in our garage back in 2021, inspired by both our love

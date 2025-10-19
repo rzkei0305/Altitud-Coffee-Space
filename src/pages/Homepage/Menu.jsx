@@ -12,7 +12,6 @@ import specials from "../../assets/specials.png";
 
 function Menu() {
      const navigate = useNavigate();
-
   return (
     <>
     <Navbar />      
