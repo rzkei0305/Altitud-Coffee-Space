@@ -17,6 +17,7 @@ import EspressoTonic from "../../assets/specials/espresso tonic.png";
 import Isla from "../../assets/specials/isla.png";
 import Sunkissed from "../../assets/specials/sunkissed.png";
 import Avogato from "../../assets/specials/avogato.png";
+import Navbar from "../../components/Navbar";
 
 function Specials() {
   const { addToBasket } = useBasket();
@@ -98,6 +99,8 @@ function Specials() {
     ));
 
   return (
+    <>
+    <Navbar />
     <div className="specials-page">
       
       {alert && (
@@ -106,7 +109,7 @@ function Specials() {
         </div>
       )}
 
-      <header className="specials-header">
+      {/* <header className="specials-header">
         <div className="logo">
           <img src={logo} alt="Logo" onClick={backToHome}/>
         </div>
@@ -114,7 +117,7 @@ function Specials() {
           <FiShoppingBag className="icon" onClick={handleBasket} />
           <FiMenu className="icon" />
         </div>
-      </header>
+      </header> */}
 
       <h1 className="specials-title">ALTITUD SPECIALS</h1>
       <p className="specials-subtitle">
@@ -132,6 +135,7 @@ function Specials() {
         {renderItems(icedSpecials, hotSpecials.length)}
       </div>
     </div>
+    </>
   );
 }
 

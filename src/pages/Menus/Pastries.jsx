@@ -15,6 +15,7 @@ import buttercroissant from "../../assets/pastries/butter croissant.png";
 import chickenpie from "../../assets/pastries/chicken pie.png";
 import flatbread from "../../assets/pastries/three cheese flat bread.png";
 import pizzabread from "../../assets/pastries/pizza bread.png";
+import Navbar from "../../components/Navbar";
 
 function Pastries() {
   const { addToBasket } = useBasket();
@@ -34,7 +35,7 @@ function Pastries() {
   ];
 
   const [quantities, setQuantities] = useState(items.map(() => 1));
-  const [alert, setAlert] = useState(null); // 💬 alert state
+  const [alert, setAlert] = useState(null); 
 
   const increaseQty = (index) => {
     const newQty = [...quantities];
@@ -70,11 +71,13 @@ function Pastries() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="pastries-page">
       
       {alert && <div className="alert-popup">{alert}</div>}
 
-      <header className="pastries-header">
+      {/* <header className="pastries-header">
         <div className="logo">
           <img src={logo} alt="Logo" onClick={backToHome}/>
         </div>
@@ -82,7 +85,7 @@ function Pastries() {
           <FiShoppingBag className="icon" onClick={handleBasket} />
           <FiMenu className="icon" />
         </div>
-      </header>
+      </header> */}
 
       <h1 className="pastries-title">PASTRIES</h1>
       <p className="pastries-subtitle">
@@ -114,6 +117,7 @@ function Pastries() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 

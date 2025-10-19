@@ -58,7 +58,6 @@ function Home() {
         </div>
       </header> */}
 
-      {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">

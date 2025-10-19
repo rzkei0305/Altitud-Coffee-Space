@@ -45,7 +45,6 @@
   focus:outline-none border border-white;
 }
 
-
 .password-wrapper {
   @apply relative;
 }
@@ -61,6 +60,11 @@
 .login-form button {
   @apply w-40 mx-auto mt-2 bg-white/20 border border-white text-white font-normal tracking-wide 
   rounded-full py-2 text-sm hover:bg-[#FF5125] transition;
+  
+}
+
+.login-form button:hover {
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.7);
 }
 
 .login-form p span {

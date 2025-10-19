@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/Basket.css";
-import { FiShoppingBag, FiMenu, FiXCircle } from "react-icons/fi";
+import { FiShoppingBag, FiMenu, FiXCircle, FiDelete } from "react-icons/fi";
 import { useBasket } from "../../context/BasketContext";
 import logo from "../../assets/logo with name.png";
 import { useNavigate } from "react-router-dom";
@@ -74,12 +74,12 @@ function Basket() {
                   <p className="basket-price">
                     ₱ {parseInt(item.price.replace("₱", "")) * item.quantity}
                   </p>
-                  <button
-                    className="remove-btn"
-                    onClick={() => removeFromBasket(item.name)}
-                  >
-                    Remove
-                  </button>
+<FiDelete
+  className="delete-icon"
+  onClick={() => removeFromBasket(item.name)}
+  size={22}
+/>
+
                 </div>
               ))
             )}

@@ -18,6 +18,7 @@ import icedMilkyStrawb from "../../assets/noncoffee/milky strawberry.png";
 import icedBerry from "../../assets/noncoffee/berry bliss.png";
 import icedMango from "../../assets/noncoffee/mango iced tea.png";
 import icedGreenTea from "../../assets/noncoffee/green tea lemonade.png";
+import Navbar from "../../components/Navbar";
 
 function NonCoffee() {
   const { addToBasket } = useBasket();
@@ -41,7 +42,7 @@ function NonCoffee() {
 
   const allItems = [...hotNonCoffee, ...icedNonCoffee];
   const [quantities, setQuantities] = useState(allItems.map(() => 1));
-  const [alert, setAlert] = useState(null); // 💬 alert message
+  const [alert, setAlert] = useState(null); 
 
   const increaseQty = (index) => {
     const newQty = [...quantities];
@@ -99,11 +100,13 @@ function NonCoffee() {
     ));
 
   return (
+    <>
+    <Navbar />
     <div className="coffee-page">
       
       {alert && <div className="alert-popup">{alert}</div>}
 
-      <header className="coffee-header">
+      {/* <header className="coffee-header">
         <div className="logo">
           <img src={logo} alt="Logo" onClick={backToHome}/>
         </div>
@@ -111,7 +114,7 @@ function NonCoffee() {
           <FiShoppingBag className="icon" onClick={handleBasket} />
           <FiMenu className="icon" />
         </div>
-      </header>
+      </header> */}
 
       <h1 className="coffee-title">NON COFFEE</h1>
       <p className="coffee-subtitle">
@@ -129,6 +132,7 @@ function NonCoffee() {
         {renderItems(icedNonCoffee, hotNonCoffee.length)}
       </div>
     </div>
+    </>
   );
 }
 

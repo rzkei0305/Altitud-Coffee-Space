@@ -24,6 +24,7 @@ import icedMocha from "../../assets/coffee/dark mocha (cold).png";
 import icedHorchata from "../../assets/coffee/dirty horchata (cold).png";
 import icedToasted from "../../assets/coffee/toasted dirty horchata (cold).png";
 import icedMatcha from "../../assets/coffee/dirty matcha latte.png";
+import Navbar from "../../components/Navbar";
 
 function Coffee() {
   const { addToBasket } = useBasket();
@@ -53,7 +54,7 @@ function Coffee() {
 
   const [hotQuantities, setHotQuantities] = useState(hotCoffee.map(() => 1));
   const [icedQuantities, setIcedQuantities] = useState(icedCoffee.map(() => 1));
-  const [alert, setAlert] = useState(null); // 💬 alert message
+  const [alert, setAlert] = useState(null); 
 
   const handleAddToBasket = (item, quantity) => {
     addToBasket({ ...item, quantity });
@@ -112,11 +113,13 @@ function Coffee() {
     ));
 
   return (
+    <>
+    <Navbar />
     <div className="coffee-page">
       
       {alert && <div className="alert-popup">{alert}</div>}
 
-      <header className="coffee-header">
+      {/* <header className="coffee-header">
         <div className="logo">
           <img src={logo} alt="Logo" onClick={backToHome} />
         </div>
@@ -124,7 +127,7 @@ function Coffee() {
           <FiShoppingBag className="icon" onClick={handleBasket} />
           <FiMenu className="icon" />
         </div>
-      </header>
+      </header> */}
 
       <h1 className="coffee-title">COFFEE</h1>
       <p className="coffee-subtitle">
@@ -144,6 +147,7 @@ function Coffee() {
         {renderItems(icedCoffee, icedQuantities, setIcedQuantities)}
       </div>
     </div>
+    </>
   );
 }
 
