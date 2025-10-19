@@ -7,6 +7,10 @@
          bg-white shadow-md px-6 z-50;
 }
 
+.basket-header-row {
+  @apply flex items-center justify-between mb-6;
+}
+
 .logo img {
   @apply w-14 h-14;
 }
@@ -28,11 +32,15 @@
 }
 
 .basket-title {
-  @apply text-2xl font-bold mb-6;
+  @apply text-2xl font-bold mb-6 font-poppins;
+}
+
+.next-icon {
+  display: none;
 }
 
 .basket-items {
-  @apply flex flex-col gap-6;
+  @apply flex flex-col gap-6 font-poppins;
 }
 
 .basket-card {
@@ -48,7 +56,7 @@
 }
 
 .basket-info h3 {
-  @apply text-base font-semibold;
+  @apply text-base font-medium;
 }
 
 .qty-container {
@@ -64,7 +72,7 @@
 }
 
 .basket-price {
-  @apply font-medium text-right;
+  @apply font-semibold text-right;
 }
 
 .delete-icon {
@@ -76,11 +84,11 @@
 }
 
 .clear-btn {
-  @apply text-[12px] font-poppins sm:text-[20px] w-60 mx-auto  px-6 py-2 mt-5 border-2 border-white rounded-full bg-orange-500 text-white cursor-pointer 
+  @apply text-sm font-poppins sm:text-[20px] w-60 mx-auto  px-6 py-2 mt-5 border-2 border-white rounded-full bg-orange-500 text-white cursor-pointer 
   transition-all duration-300 ease-in-out;
 }
 
-
+/* ===================================== PAYMENT PANEL ===================================*/
 
 .basket-right {
   @apply fixed top-[60px] right-0 h-[calc(100vh-60px)] md:w-1/3 
@@ -90,7 +98,7 @@
 }
 
 .payment-header {
-  @apply flex justify-between items-center mb-4 md:mb-6;
+  @apply flex  font-poppins font-semibold text-3xl justify-between items-center mb-4 md:mb-6;
 }
 
 .close-icon {
@@ -98,11 +106,11 @@
 }
 
 .payment-details {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-3 font-poppins font-medium;
 }
 
 .payment-row {
-  @apply flex justify-between text-sm;
+  @apply flex justify-between text-[16px];
 }
 
 .total {
@@ -110,11 +118,11 @@
 }
 
 .payment-mode {
-  @apply mt-4 flex flex-col gap-2 text-sm;
+  @apply mt-4 flex flex-col gap-2 text-[16px];
 }
 
 .payment-mode h4 {
-  @apply text-sm font-semibold mb-2;
+  @apply text-[16px] font-semibold mb-2;
 }
 
 .checkout-btn {
@@ -132,4 +140,148 @@ footer {
 
 .show-payment {
   @apply translate-x-0;
+}
+
+
+@media (max-width: 768px) {
+  .basket-content {
+    @apply flex flex-col px-4 pt-24 pb-10;
+  }
+
+  .basket-left {
+    @apply w-full;
+  }
+
+  .basket-title {
+    @apply text-2xl font-bold mt-5 mb-6 font-poppins;
+  }
+    .basket-header-row {
+    @apply flex items-center justify-between mb-6;
+  }
+
+  .next-icon {
+    @apply text-black cursor-pointer transition-transform duration-200;
+    display: block;
+  }
+
+  .next-icon:hover {
+    @apply scale-110;
+  }
+
+  .basket-card {
+    @apply flex items-center justify-between w-full px-3 py-2 bg-orange-50 rounded-2xl shadow-md;
+  }
+
+  .basket-card img {
+    @apply w-16 h-16;
+  }
+
+  .basket-info h3 {
+    @apply text-sm font-semibold;
+  }
+
+  .basket-price {
+    @apply text-sm font-bold;
+  }
+
+.basket-right {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); 
+  backdrop-filter: blur(2px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.hide-payment {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.show-payment {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.payment-details {
+  position: relative; 
+  background: linear-gradient(to bottom, #ffedd5, #fb923c);
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  animation: popIn 0.4s ease-out forwards;
+}
+
+
+.payment-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-weight: 600;
+  font-size: 1.125rem; 
+  margin-bottom: 1rem;
+}
+
+.close-icon {
+  @apply block cursor-pointer text-black ml-[20vh];
+}
+
+.payment-header .close-btn {
+  position: absolute;
+  right: 5rem; 
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.payment-details .close-btn:hover {
+  transform: scale(1.2);
+}
+  .payment-row {
+    @apply flex justify-between text-[15px];
+  }
+
+  .total {
+    @apply font-bold;
+  }
+
+  .payment-mode {
+    @apply mt-4 flex flex-col gap-2 text-[15px];
+  }
+
+  .payment-mode h4 {
+    @apply text-[15px] font-semibold mb-1;
+  }
+
+  .checkout-btn {
+    @apply mt-5 w-full bg-white border border-orange-600 text-orange-600 font-semibold py-2 rounded-full;
+  }
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }
